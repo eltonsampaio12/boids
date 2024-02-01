@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My first three.js app</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: black;
+        height: 100vh;
+        color: white;
+        font-family: "Arial", sans-serif;
+      }
+
+      .container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+      }
+
+      .parameterParent {
+        width: 400px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      label {
+        margin-right: 10px;
+        font-weight: bold;
+        flex: 1;
+      }
+
+      input {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        outline: none;
+      }
+
+      span {
+        font-weight: bold;
+        width: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="boidsCanvas" width="800" height="600"></canvas>
+    <script type="module" src="/main.ts"></script>
+
+    <div class="container">
+      <div class="parameterParent">
+        <label for="perceptionRadiusSlider">Perception Radius:</label>
+        <input
+          type="range"
+          id="perceptionRadiusSlider"
+          min="0"
+          max="300"
+          value="50"
+          step="1"
+        />
+        <span id="perceptionRadiusValue">50</span>
+      </div>
+
+      <div class="parameterParent">
+        <label for="alignmentSlider">Alignment:</label>
+        <input
+          type="range"
+          id="alignmentSlider"
+          min="0"
+          max="1"
+          value="0.1"
+          step="0.1"
+        />
+        <span id="alignmentValue">0.1</span>
+      </div>
+
+      <div class="parameterParent">
+        <label for="cohesionSlider">Cohesion:</label>
+        <input
+          type="range"
+          id="cohesionSlider"
+          min="0"
+          max="1"
+          value="0.01"
+          step="0.1"
+        />
+        <span id="cohesionValue">0.01</span>
+      </div>
+
+      <div class="parameterParent">
+        <label for="separationSlider">Separation:</label>
+        <input
+          type="range"
+          id="separationSlider"
+          min="0"
+          max="100"
+          value="0"
+          step="0.1"
+        />
+        <span id="separationValue">0</span>
+      </div>
+    </div>
+  </body>
+</html>

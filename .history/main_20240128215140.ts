@@ -1,0 +1,30 @@
+import * as THREE from "three";
+import { Boid } from "./entities/boid";
+import { initializeBoids } from "./utils";
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(
+  75,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000
+);
+
+const boids: Array<{ boid: Boid; mesh: THREE.Mesh }> = initializeBoids(5);
+
+// Add boid meshes to the scene using a for loop
+for (let i = 0; i < boids.length; i++) {
+  const { mesh } = boids[i];
+  scene.add(mesh);
+}
+camera.position.z = 50;
+
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+function animate() {
+  requestAnimationFrame(animate);
+  renderer.render(scene, camera);
+}
+animate();

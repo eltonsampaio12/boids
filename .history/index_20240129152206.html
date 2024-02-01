@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My first three.js app</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: black;
+      }
+      .perceptionRadiusLabel {
+        color: white;
+      }
+
+      .perceptionRadiusParent {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 10px;
+        margin-top: 20px;
+      }
+
+      .perceptionRadiusValue {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="module" src="/main.ts"></script>
+
+    <div class="perceptionRadiusParent">
+      <label class="perceptionRadiusLabel" for="perceptionRadiusSlider"
+        >Perception Radius:</label
+      >
+      <input
+        type="range"
+        id="perceptionRadiusSlider"
+        min="0"
+        max="100"
+        value="30"
+        step="1"
+        oninput="updatePerceptionRadius(this.value)"
+      />
+    </div>
+
+    <span class=perceptionRadiusValue" id=perceptionRadiusValue">0</span>
+  </body>
+</html>
