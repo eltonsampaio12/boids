@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My first three.js app</title>
+    <style></style>
+  </head>
+  <body>
+    <script type="module" src="/main.ts"></script>
+
+    <div class="container">
+      <div class="parameterParent">
+        <label for="randomForceSlider">Random force weight:</label>
+        <input
+          type="range"
+          id="randomForceSlider"
+          min="0"
+          max="4"
+          value="0.2"
+          step="0.01"
+        />
+        <span id="randomForceValue">0</span>
+      </div>
+      <div class="parameterParent">
+        <label for="perceptionRadiusSlider">Perception Radius:</label>
+        <input
+          type="range"
+          id="perceptionRadiusSlider"
+          min="0"
+          max="300"
+          value="50"
+          step="1"
+        />
+        <span id="perceptionRadiusValue">50</span>
+      </div>
+
+      <div class="parameterParent">
+        <label for="alignmentSlider">Alignment:</label>
+        <input
+          type="range"
+          id="alignmentSlider"
+          min="0.000001"
+          max="1"
+          value="0"
+          step="0.01"
+        />
+        <span id="alignmentValue">0</span>
+      </div>
+
+      <div class="parameterParent">
+        <label for="cohesionSlider">Cohesion:</label>
+        <input
+          type="range"
+          id="cohesionSlider"
+          min="0.000001"
+          max="1"
+          value="0"
+          step="0.01"
+        />
+        <span id="cohesionValue">0</span>
+      </div>
+
+      <div class="parameterParent">
+        <label for="separationSlider">Separation:</label>
+        <input
+          type="range"
+          id="separationSlider"
+          min="0.000001"
+          max="1"
+          value="0"
+          step="0.01"
+        />
+        <span id="separationValue">0</span>
+      </div>
+    </div>
+  </body>
+</html>
